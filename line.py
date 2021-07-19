@@ -33,6 +33,10 @@ class Follower:
 			self.twist.linear.x = 0.2
 			self.twist.angular.z = -float(err) / 1200
 			self.cmd_vel_pub.publish(self.twist)
+		else:
+			self.twist.linear.x = 0
+			self.twist.angular.z = 0
+			self.cmd_vel_pub.publish(self.twist)
  
 			cv2.imshow("window", image)
 			cv2.waitKey(3)
