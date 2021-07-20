@@ -6,7 +6,8 @@ client = mqtt.Client("P1") # create new instance
 client.connect(broker_address) # connect to broker
 sg.set_options(element_padding=(0, 0))
 
-layout = [ [sg.Button("End of session"), sg.Button("Malii vpered"), sg.Button("Malii nazad"), sg.Button("Stop machina")],[sg.Button("Nalevo"), sg.Button("Napravo")]]
+layout = [ [sg.Button("End of session"), sg.Button("Malii vpered"), sg.Button("Malii nazad"), 
+	    sg.Button("Stop machina")],[sg.Button("Nalevo"), sg.Button("Napravo")]]
  # Create the window
 window = sg.Window("Robot GUI", layout,
           default_element_size=(12, 1),
